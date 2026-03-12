@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>First Page Bro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div style="display: flex; flex-direction: row; align-items: center; gap: 10px">
+        <div style="width: 50px; height: 50px; background-color:aqua; margin-bottom: 5px">1</div>
+        <div style="width: 50px; height: 50px; background-color:cadetblue; margin-bottom: 5px; padding: 10px"> 
+        <!-- el padding lo entiendo como una margen interior para separar los elementos contenidos-->
+        <div style="width: 15px; height: 15px; background-color:rgb(166, 186, 80);">2</div>
+    </div>
+        <div style="width: 50px; height: 50px; background-color:tomato; border: 2px solid">3</div>
+    </div>
+
+        <h1>Bienvenido a mi pagina</h1>
+        <h2>Esta es mi primera pagina web mela</h2>
+        <h3>Lo mejor de lo mejor</h3>
+        <p>Este es un parrafo de prueba. Comenta si te gusta mi pagina.</p>
+        <a href="https://www.google.com">Google</a>
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+        <ul>    <!-- Lista no estructurada -->
+            <li>Elemento 1</li> <!-- List Item -->
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+        </ul>
+        <ol>    <!-- Lista estructurada -->
+            <li>Elemento 1</li> <!-- List Item -->
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+        </ol>
+        
+        <label for="">
+            Ingresa tu nombre:
+            <input type="text" name="name" id="name" placeholder="Escriba papi" onchange="saludar()">
+        </label>
+        <button onclick="mostrarName()">
+            Ingresar
+        </button>
+        <script>
+            function sal(){
+                alert('holii');
+            }
+            sal();
+            function mostrarName(){
+                let nombre = document.getElementById("name").value;
+                if (nombre==''){
+                    alert("Ingrese valor jmm")
+                    return
+                } else { 
+                    alert("El name es "+nombre)
+                }
+            }
+            function saludar(){
+                let nombre = document.getElementById("name").value;
+                alert("Hola AGAIN "+ nombre)
+            }
+        </script>
+</body>
+
+</html>

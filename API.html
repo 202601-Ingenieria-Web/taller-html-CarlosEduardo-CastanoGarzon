@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="fetchPokemon(event)">
+        <label for="name">Busque el pokemon:</label>
+        <input type="text" name="name" id="name" placeholder="Pikachu o ud verá">
+        <button type="submit">Buscar</button>
+    </form>
+    
+    <div id="poke_info"></div>
+    <script>
+        function fetchPokemon(event){
+            event.preventDefault(); // evita que la página se recargue
+            let pokemonName = document.getElementById('name').value.toLowerCase();
+            let url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+            fetch(url).then(response => {
+                if (response.ok){return response.json()}
+                else {throw new Error('Pokemon no encontrado')}
+            }).then (data =>{
+                document.getElementById("poke_info").innerHTML = `
+                <h2>${data.name.toUpperCase()}</h2>
+                <img src = "${data.sprites.front_default}" alt="${data.name}" />
+                <p> Altura: ${data.height} </p>
+                <p> Peso: ${data.weight} </p>
+                `;
+            }).catch((error) => {
+                document.getElementById('poke_info').innerHTML = `<p>${error.message}</p>`;
+            });
+        }
+    </script>
+</body>
+</html>
