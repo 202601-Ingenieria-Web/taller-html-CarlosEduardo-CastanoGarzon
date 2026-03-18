@@ -24,12 +24,34 @@
                 if (response.ok){return response.json()}
                 else {throw new Error('Pokemon no encontrado')}
             }).then (data =>{
+                let abilities = data.abilities.map(a => a.ability.name).join(", ");
+                let types = data.types.map(t => t.type.name).join(", ");
+                let stats = data.stats.map(s => `${s.stat.name}: ${s.base_stat}`).join("<br>");
+                let moves = data.moves.slice(0, 3).map(m => m.move.name).join(", ");
+
                 document.getElementById("poke_info").innerHTML = `
-                <h2>${data.name.toUpperCase()}</h2>
-                <img src = "${data.sprites.front_default}" alt="${data.name}" />
-                <p> Altura: ${data.height} </p>
-                <p> Peso: ${data.weight} </p>
-                `;
+                    <h2>${data.name.toUpperCase()}</h2>
+                    <img src = "${data.sprites.front_default}" alt="${data.name}" />
+
+                    <p><strong>ID:</strong> ${data.id}</p>
+                    <p><strong>Altura:</strong> ${data.height}</p>
+                    <p><strong>Peso:</strong> ${data.weight}</p>
+                    <p><strong>Experiencia base:</strong> ${data.base_experience}</p>
+                    <p><strong>Tipo:</strong> ${types}</p>
+                    <p><strong>Habilidades:</strong> ${abilities}</p>
+                    <p><strong>Forma:</strong> ${data.forms[0].name}</p>
+                    <p><strong>Orden:</strong> ${data.order}</p>
+                    <p><strong>Movimientos:</strong> ${moves}</p>
+
+                    <div>
+                        <strong>Stats:</strong><br>
+                        ${stats}
+                    </div>
+
+                    <audio controls>
+                        <source src="${data.cries.latest}" type="audio/ogg">
+                    </audio>
+                    `;
             }).catch((error) => {
                 document.getElementById('poke_info').innerHTML = `<p>${error.message}</p>`;
             });
