@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
     <form onsubmit="fetchPokemon(event)">
         <label for="name">Busque el pokemon:</label>
         <input type="text" name="name" id="name" placeholder="Pikachu o ud verá">
@@ -33,5 +35,6 @@
             });
         }
     </script>
+    </div>
 </body>
 </html>

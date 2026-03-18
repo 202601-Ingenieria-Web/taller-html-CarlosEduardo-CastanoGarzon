@@ -1,15 +1,88 @@
-h1 {
-    color: blueviolet;
-    font-size: 24px;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ff4d4d, #3b4cca);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     text-align: center;
+    width: 300px;
 }
-p{
-    color: gray;
-    font-size: 18px;
-    line-height: 1; /*espaciado*/
-    flex-direction: row;
+
+/* Formulario */
+form {
+    margin-bottom: 20px;
 }
-div{
-    border: 1px solid;
-    border-radius: 5%;
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #3b4cca;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+/* Info del Pokémon */
+#poke_info {
+    margin-top: 15px;
+}
+
+#poke_info img {
+    width: 120px;
+    margin: 10px 0;
+}
+
+#poke_info h2 {
+    color: #3b4cca;
+    margin-bottom: 10px;
+}
+
+#poke_info p {
+    font-size: 14px;
+    color: #333;
 }
