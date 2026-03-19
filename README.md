@@ -39,7 +39,7 @@ API externa: https://pokeapi.co/
 
 Opción 1: Abrir directamente
 1. Descargar o clonar el repositorio
-2. Abrir el archivo API.html en el navegador
+2. Abrir el archivo index.html en el navegador
 
 Opción 2: Usar servidor local  
 1. Descargar o clonar el repositorio  
