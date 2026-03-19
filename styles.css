@@ -86,3 +86,9 @@ button:hover {
     font-size: 14px;
     color: #333;
 }
+
+#poke_info audio {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+}

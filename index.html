@@ -10,7 +10,7 @@
     <div class="container">
     <form onsubmit="fetchPokemon(event)">
         <label for="name">Busque el pokemon:</label>
-        <input type="text" name="name" id="name" placeholder="Pikachu o ud verá">
+        <input type="text" name="name" id="name" placeholder="Ejemplo: Pikachu, Bulbasaur, Mew...">
         <button type="submit">Buscar</button>
     </form>
     
@@ -19,11 +19,11 @@
         function fetchPokemon(event){
             event.preventDefault(); // evita que la página se recargue
             let pokemonName = document.getElementById('name').value.toLowerCase();
-            let url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+            let url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;       // Intentamos acceder a la API
             fetch(url).then(response => {
-                if (response.ok){return response.json()}
+                if (response.ok){return response.json()}            // Validamos respuesta
                 else {throw new Error('Pokemon no encontrado')}
-            }).then (data =>{
+            }).then (data =>{                                       // Extraemos la información de la respuesta
                 let abilities = data.abilities.map(a => a.ability.name).join(", ");
                 let types = data.types.map(t => t.type.name).join(", ");
                 let stats = data.stats.map(s => `${s.stat.name}: ${s.base_stat}`).join("<br>");
@@ -42,12 +42,12 @@
                     <p><strong>Forma:</strong> ${data.forms[0].name}</p>
                     <p><strong>Orden:</strong> ${data.order}</p>
                     <p><strong>Movimientos:</strong> ${moves}</p>
-
+                
                     <div>
                         <strong>Stats:</strong><br>
                         ${stats}
                     </div>
-
+                    
                     <audio controls>
                         <source src="${data.cries.latest}" type="audio/ogg">
                     </audio>
