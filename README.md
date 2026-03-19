@@ -33,7 +33,8 @@ CSS3
 JavaScript
 API externa: https://pokeapi.co/
 
-Cómo ejecutar el proyecto
+Cómo ejecutar el proyecto:
+
 Opción 1: Abrir directamente
 1. Descargar o clonar el repositorio
 2. Abrir el archivo API.html en el navegador
