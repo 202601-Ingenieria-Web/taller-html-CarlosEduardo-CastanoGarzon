@@ -10,20 +10,20 @@ Manipular el DOM con JavaScript
 Aplicar estilos con CSS  
 Desarrollar una interfaz web interactiva básica  
 
-Funcionalidades:
-Búsqueda de Pokémon por nombre
-Visualización de imagen del Pokémon
-Información detallada:
-ID
-Nombre
-Altura
-Peso
-Experiencia base
-Tipos
-Habilidades
-Forma
-Orden
-Movimientos
+Funcionalidades:  
+Búsqueda de Pokémon por nombre  
+Visualización de imagen del Pokémon  
+Información detallada:  
+ID  
+Nombre  
+Altura  
+Peso  
+Experiencia base  
+Tipos  
+Habilidades  
+Forma  
+Orden  
+Movimientos  
 Estadísticas (HP, ataque, defensa, etc.)
 🔊 Reproducción de sonido del Pokémon
 
