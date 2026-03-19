@@ -1,16 +1,17 @@
-Implementación PokeAPI Web App
+## Implementación PokeAPI Web App
 
 Esta es una aplicación web desarrollada en HTML, CSS y JavaScript que consume la API pública PokeAPI para buscar y visualizar información de Pokémon en tiempo real.
 El usuario puede ingresar el nombre de un Pokémon y la aplicación mostrará sus datos principales de forma dinámica.
 
-Los objetivos de este proyecto son:  
+### Los objetivos de este proyecto son:  
 
 Practicar el consumo de APIs REST usando fetch  
 Manipular el DOM con JavaScript  
 Aplicar estilos con CSS  
 Desarrollar una interfaz web interactiva básica  
 
-Funcionalidades:  
+### Funcionalidades:  
+
 Búsqueda de Pokémon por nombre  
 Visualización de imagen del Pokémon  
 Información detallada:  
@@ -27,13 +28,14 @@ Movimientos
 Estadísticas (HP, ataque, defensa, etc.)  
 🔊 Reproducción de sonido del Pokémon  
 
-Tecnologías utilizadas:  
+### Tecnologías utilizadas:  
+
 HTML5  
 CSS3  
 JavaScript  
 API externa: https://pokeapi.co/  
 
-Cómo ejecutar el proyecto:
+### Cómo ejecutar el proyecto:
 
 Opción 1: Abrir directamente
 1. Descargar o clonar el repositorio
